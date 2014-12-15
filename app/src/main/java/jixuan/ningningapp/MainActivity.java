@@ -1,7 +1,8 @@
 package jixuan.ningningapp;
 
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -20,12 +21,24 @@ public class MainActivity extends ActionBarActivity {
         Log.i("MainActivity", "onCreate execute");
         setContentView(R.layout.activity_main);
         Button button1 = (Button) findViewById(R.id.button_1);
+        Button buttonClose = (Button) findViewById(R.id.button_close);
+
+        buttonClose.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
         button1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this,"You Click Button 1 Bomb!!!",Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, "You Click Button 1 Bomb!!!", Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
             }
         });
+
     }
 
 
@@ -47,7 +60,13 @@ public class MainActivity extends ActionBarActivity {
         if (id == R.id.action_settings) {
             return true;
         }
-
-        return super.onOptionsItemSelected(item);
+        switch (item.getItemId()) {
+            case R.id.add_item:
+                Toast.makeText(this, "You clicked Add", Toast.LENGTH_SHORT).show();
+            case R.id.remove_item:
+                Toast.makeText(this, "You clicked Remove", Toast.LENGTH_SHORT).show();
+            default:
+        }
+        return true;
     }
 }
