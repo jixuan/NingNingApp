@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button_1"
-        android:text="百度一下"
+        android:text="拨打电话"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
     />

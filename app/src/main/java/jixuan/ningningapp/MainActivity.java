@@ -26,8 +26,10 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 Log.i("MainActivity","onClick~~~~~~~~~");
 //                Intent intent = new Intent("jixuan.ningningapp.My_ACTION");
-                Intent intent = new Intent(Intent.ACTION_VIEW);
-                intent.setData(Uri.parse("http://www.baidu.com"));
+//                Intent intent = new Intent(Intent.ACTION_VIEW);
+//                intent.setData(Uri.parse("http://www.baidu.com"));
+                Intent intent = new Intent(Intent.ACTION_DIAL);
+                intent.setData(Uri.parse("tel:10086"));
                 startActivity(intent);
             }
         });

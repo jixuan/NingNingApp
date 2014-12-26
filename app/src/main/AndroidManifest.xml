@@ -28,9 +28,10 @@
 
         <activity android:name="jixuan.ningningapp.ThirdActivity">
             <intent-filter>
-                <action android:name="android.intent.action.VIEW"/>
+                <!--<action android:name="android.intent.action.VIEW"/>-->
+                <action android:name="android.intent.action.DIAL"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:scheme="http"/>
+                <data android:scheme="tel"/>
             </intent-filter>
         </activity>
 
