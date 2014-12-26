@@ -1,7 +1,7 @@
 package jixuan.ningningapp;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.ActionBarActivity;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
@@ -11,7 +11,7 @@ import android.widget.Toast;
 /**
  * Created by jixuan on 14/12/15.
  */
-public class SecondActivity extends Activity {
+public class SecondActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
