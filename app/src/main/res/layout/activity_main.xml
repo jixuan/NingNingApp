@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/button_1"
-        android:text="拨打电话"
+        android:text="穿越"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
     />
